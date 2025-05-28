@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Café Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500&display=swap');
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFF9F0;
+        }
+        .logo {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="%23F8B400"/><path d="M50 20 L60 50 L50 80 L40 50 Z" fill="%23FFFFFF"/><circle cx="50" cy="50" r="15" fill="%23FFFFFF"/></svg>');
+        }
+        .category-card {
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
+        }
+        .category-content {
+            position: relative;
+            z-index: 1;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="max-w-md mx-auto p-4 pb-8">
+    <!-- Header -->
+    <header class="text-center mb-8">
+        <div class="logo w-24 h-24 mx-auto bg-cover rounded-full mb-4 shadow-md"></div>
+        <h1 class="text-4xl font-serif font-bold text-amber-800 mb-2">Sunrise Café</h1>
+        <p class="text-amber-600 italic">Morning bliss in every bite</p>
+    </header>
+
+    <!-- Category Cards -->
+    <div class="grid gap-6">
+        <!-- Drinks Card -->
+        <a href="drinks.html" class="category-card block rounded-xl shadow-md h-48" 
+           style="background-image: url('img/drinks.jpg')">
+            <div class="category-content h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-3xl font-serif font-bold mb-1">Drinks</h2>
+                <p class="text-amber-100">Refreshing beverages to start your day</p>
+            </div>
+        </a>
+
+        <!-- Starters Card -->
+        <a href="starters.html" class="category-card block rounded-xl shadow-md h-48" 
+           style="background-image: url('img/starters.jpg')">
+            <div class="category-content h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-3xl font-serif font-bold mb-1">Starters</h2>
+                <p class="text-amber-100">Light bites to awaken your appetite</p>
+            </div>
+        </a>
+
+        <!-- Main Dishes Card -->
+        <a href="mains.html" class="category-card block rounded-xl shadow-md h-48" 
+           style="background-image: url('img/food.jpg')">
+            <div class="category-content h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-3xl font-serif font-bold mb-1">Main Dishes</h2>
+                <p class="text-amber-100">Hearty meals to satisfy your hunger</p>
+            </div>
+        </a>
+
+        <!-- Desserts Card -->
+        <a href="desserts.html" class="category-card block rounded-xl shadow-md h-48" 
+           style="background-image: url('img/desserts.jpg')">
+            <div class="category-content h-full flex flex-col justify-end p-6 text-white">
+                <h2 class="text-3xl font-serif font-bold mb-1">Desserts</h2>
+                <p class="text-amber-100">Sweet treats to complete your meal</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center text-amber-700 text-sm">
+        <p>© 2023 Sunrise Café. All rights reserved.</p>
+        <p class="mt-1">123 Sunshine Ave, Morningville</p>
+    </footer>
+</body>
+<!-- QR Code Section -->
+<section class="mt-12 text-center p-6 bg-amber-50 rounded-xl">
+  <h3 class="text-xl font-serif text-amber-800 mb-3">Scan Our Menu</h3>
+  <div class="bg-white p-3 inline-block rounded-lg">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://your-actual-url.com" 
+         alt="Menu QR Code" width="150" class="mx-auto">
+  </div>
+  <p class="text-amber-600 mt-3 text-sm">Point your camera at this code</p>
+</section>
+</html>
