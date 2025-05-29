@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starters | Sunrise Café</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFF9F0;
+        }
+        
+        .starter-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .starter-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="max-w-md mx-auto">
+    <!-- Popular Items Navbar (Same as mains.html) -->
+    <nav class="sticky top-0 z-10 bg-white shadow-sm py-2 px-4">
+        <div class="flex items-center">
+            <span class="font-bold text-amber-800 mr-3 whitespace-nowrap">Popular</span>
+            <div class="relative w-full overflow-hidden">
+                <div class="scrolling-wrapper auto-scroll">
+                    <a href="starters.html#bruschetta" class="popular-item mx-2 w-20 text-center">
+                        <div class="w-12 h-12 mx-auto bg-cover rounded-full" style="background-image: url('img/bruschetta-thumb.jpg')"></div>
+                        <p class="text-xs mt-1 text-amber-800 truncate">Bruschetta</p>
+                    </a>
+                    <a href="starters.html#garlic-bread" class="popular-item mx-2 w-20 text-center">
+                        <div class="w-12 h-12 mx-auto bg-cover rounded-full" style="background-image: url('img/garlic-bread-thumb.jpg')"></div>
+                        <p class="text-xs mt-1 text-amber-800 truncate">Garlic Bread</p>
+                    </a>
+                    <!-- Duplicate items for seamless looping -->
+                    <a href="starters.html#bruschetta" class="popular-item mx-2 w-20 text-center">
+                        <div class="w-12 h-12 mx-auto bg-cover rounded-full" style="background-image: url('img/bruschetta-thumb.jpg')"></div>
+                        <p class="text-xs mt-1 text-amber-800 truncate">Bruschetta</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="p-4 pb-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-serif font-bold text-amber-800 mb-1">Starters</h1>
+            <p class="text-amber-600">Perfect beginnings to your meal</p>
+        </header>
+
+        <!-- Menu Items -->
+        <div class="grid gap-6">
+            <!-- Bruschetta -->
+            <div id="bruschetta" class="starter-card bg-white rounded-xl overflow-hidden">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('img/bruschetta.jpg')"></div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl font-bold text-amber-900">Bruschetta</h2>
+                        <span class="text-lg font-bold text-amber-600">$6.50</span>
+                    </div>
+                    <div class="my-3 flex flex-wrap">
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Ciabatta</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Heirloom Tomatoes</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Basil</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Balsamic</span>
+                    </div>
+                    <p class="text-sm text-amber-700">Toasted ciabatta topped with fresh tomato, garlic, and basil</p>
+                    <p class="text-xs text-amber-500 mt-2">Vegetarian • Vegan option</p>
+                </div>
+            </div>
+
+            <!-- Garlic Bread -->
+            <div id="garlic-bread" class="starter-card bg-white rounded-xl overflow-hidden">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('img/garlic-bread.jpg')"></div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl font-bold text-amber-900">Garlic Bread</h2>
+                        <span class="text-lg font-bold text-amber-600">$5.00</span>
+                    </div>
+                    <div class="my-3 flex flex-wrap">
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Baguette</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Roasted Garlic</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Parsley</span>
+                    </div>
+                    <p class="text-sm text-amber-700">Freshly baked baguette with our signature garlic-herb butter</p>
+                    <p class="text-xs text-amber-500 mt-2">Add cheese +$1.50</p>
+                </div>
+            </div>
+
+            <!-- Soup of the Day -->
+            <div class="starter-card bg-white rounded-xl overflow-hidden">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('img/soup-of-the-day.jpg')"></div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl font-bold text-amber-900">Soup of the Day</h2>
+                        <span class="text-lg font-bold text-amber-600">$5.50</span>
+                    </div>
+                    <div class="my-3 flex flex-wrap">
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Seasonal</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Homemade</span>
+                    </div>
+                    <p class="text-sm text-amber-700">Chef's daily selection made with fresh, local ingredients</p>
+                    <p class="text-xs text-amber-500 mt-2">Ask your server about today's selection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Pause animation on hover
+        const scrollContainer = document.querySelector('.scrolling-wrapper');
+        scrollContainer.addEventListener('mouseenter', () => {
+            scrollContainer.style.animationPlayState = 'paused';
+        });
+        scrollContainer.addEventListener('mouseleave', () => {
+            scrollContainer.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>
