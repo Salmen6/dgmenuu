@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothies | Sunrise Café</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500&display=swap');
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFF9F0;
+        }
+        .smoothie-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .smoothie-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .ingredient-badge {
+            display: inline-block;
+            background-color: #F8B400;
+            color: white;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body class="max-w-md mx-auto p-4 pb-8">
+    <!-- Header -->
+    <header class="text-center mb-8">
+        <h1 class="text-3xl font-serif font-bold text-amber-800 mb-1">Sunrise Smoothies</h1>
+        <p class="text-amber-600">Fresh • Healthy • Delicious</p>
+    </header>
+
+    <!-- Smoothie Cards -->
+    <div class="grid gap-6">
+        <!-- Berry Blast -->
+        <div class="smoothie-card bg-white rounded-xl overflow-hidden">
+            <div class="h-60 bg-cover bg-center" style="background-image: url('img/berry-smoothie.jpg')"></div>
+            <div class="p-5">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-xl font-bold text-amber-900">Berry Blast</h2>
+                    <span class="text-lg font-bold text-amber-600">$5.50</span>
+                </div>
+                
+                <div class="my-3">
+                    <span class="ingredient-badge">Strawberry</span>
+                    <span class="ingredient-badge">Blueberry</span>
+                    <span class="ingredient-badge">Raspberry</span>
+                    <span class="ingredient-badge">Yogurt</span>
+                    <span class="ingredient-badge">Honey</span>
+                </div>
+                
+                <p class="text-sm text-amber-700">A vibrant mix of antioxidant-rich berries with creamy yogurt</p>
+            </div>
+        </div>
+
+        <!-- Tropical Sunrise -->
+        <div class="smoothie-card bg-white rounded-xl overflow-hidden">
+            <div class="h-60 bg-cover bg-center" style="background-image: url('img/tropical-smoothie.jpg')"></div>
+            <div class="p-5">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-xl font-bold text-amber-900">Tropical Sunrise</h2>
+                    <span class="text-lg font-bold text-amber-600">$5.00</span>
+                </div>
+                
+                <div class="my-3">
+                    <span class="ingredient-badge">Mango</span>
+                    <span class="ingredient-badge">Pineapple</span>
+                    <span class="ingredient-badge">Banana</span>
+                    <span class="ingredient-badge">Coconut Milk</span>
+                </div>
+                
+                <p class="text-sm text-amber-700">A taste of the tropics with sweet mango and pineapple</p>
+            </div>
+        </div>
+
+        <!-- Green Energy -->
+        <div class="smoothie-card bg-white rounded-xl overflow-hidden">
+            <div class="h-60 bg-cover bg-center" style="background-image: url('img/green-smoothie.jpg')"></div>
+            <div class="p-5">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-xl font-bold text-amber-900">Green Energy</h2>
+                    <span class="text-lg font-bold text-amber-600">$6.00</span>
+                </div>
+                
+                <div class="my-3">
+                    <span class="ingredient-badge">Spinach</span>
+                    <span class="ingredient-badge">Kale</span>
+                    <span class="ingredient-badge">Apple</span>
+                    <span class="ingredient-badge">Ginger</span>
+                    <span class="ingredient-badge">Lemon</span>
+                </div>
+                
+                <p class="text-sm text-amber-700">Packed with greens for a nutritious energy boost</p>
+            </div>
+        </div>
+
+        <!-- Peanut Butter Power -->
+        <div class="smoothie-card bg-white rounded-xl overflow-hidden">
+            <div class="h-60 bg-cover bg-center" style="background-image: url('img/peanut-smoothie.jpg')"></div>
+            <div class="p-5">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-xl font-bold text-amber-900">Peanut Butter Power</h2>
+                    <span class="text-lg font-bold text-amber-600">$5.75</span>
+                </div>
+                
+                <div class="my-3">
+                    <span class="ingredient-badge">Banana</span>
+                    <span class="ingredient-badge">Peanut Butter</span>
+                    <span class="ingredient-badge">Oats</span>
+                    <span class="ingredient-badge">Almond Milk</span>
+                    <span class="ingredient-badge">Chia Seeds</span>
+                </div>
+                
+                <p class="text-sm text-amber-700">Protein-packed smoothie to keep you full and energized</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-8 text-center">
+        <a href="drinks.html" class="inline-block px-6 py-2 bg-amber-100 text-amber-800 rounded-full shadow-sm hover:bg-amber-200 transition">
+            ← Back to Drinks Menu
+        </a>
+    </div>
+</body>
+</html>
