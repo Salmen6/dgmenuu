@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Dishes | Sunrise Café</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFF9F0;
+        }
+        
+        .scrolling-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100px * 6)); }
+        }
+        
+        .auto-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        
+        .dish-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .dish-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .popular-item {
+            flex: 0 0 auto;
+            transition: transform 0.3s;
+        }
+        
+        .popular-item:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="max-w-md mx-auto">
+    <!-- Popular Items Navbar -->
+    <nav class="sticky top-0 z-10 bg-white shadow-sm py-2 px-4">
+        <div class="flex items-center">
+            <span class="font-bold text-amber-800 mr-3 whitespace-nowrap">Popular</span>
+            <div class="relative w-full overflow-hidden">
+                <div class="scrolling-wrapper auto-scroll">
+                    <a href="mains.html#avocado-toast" class="popular-item mx-2 w-20 text-center">
+                        <div class="w-12 h-12 mx-auto bg-cover rounded-full" style="background-image: url('img/avocado-toast-thumb.jpg')"></div>
+                        <p class="text-xs mt-1 text-amber-800 truncate">Avocado Toast</p>
+                    </a>
+                    <a href="mains.html#margherita" class="popular-item mx-2 w-20 text-center">
+                        <div class="w-12 h-12 mx-auto bg-cover rounded-full" style="background-image: url('img/margherita-thumb.jpg')"></div>
+                        <p class="text-xs mt-1 text-amber-800 truncate">Margherita Pizza</p>
+                    </a>
+                    <a href="starters.html#bruschetta" class="popular-item mx-2 w-20 text-center">
+                        <div class="w-12 h-12 mx-auto bg-cover rounded-full" style="background-image: url('img/bruschetta-thumb.jpg')"></div>
+                        <p class="text-xs mt-1 text-amber-800 truncate">Bruschetta</p>
+                    </a>
+                    <!-- Duplicate items for seamless looping -->
+                    <a href="mains.html#avocado-toast" class="popular-item mx-2 w-20 text-center">
+                        <div class="w-12 h-12 mx-auto bg-cover rounded-full" style="background-image: url('img/avocado-toast-thumb.jpg')"></div>
+                        <p class="text-xs mt-1 text-amber-800 truncate">Avocado Toast</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="p-4 pb-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-serif font-bold text-amber-800 mb-1">Main Dishes</h1>
+            <p class="text-amber-600">Hearty meals made with love</p>
+        </header>
+
+        <!-- Menu Items -->
+        <div class="grid gap-6">
+            <!-- Avocado Toast -->
+            <div id="avocado-toast" class="dish-card bg-white rounded-xl overflow-hidden">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('img/avocado-toast.jpg')"></div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl font-bold text-amber-900">Avocado Toast</h2>
+                        <span class="text-lg font-bold text-amber-600">$8.50</span>
+                    </div>
+                    <div class="my-3 flex flex-wrap">
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Sourdough</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Avocado</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Poached Egg</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Chili Flakes</span>
+                    </div>
+                    <p class="text-sm text-amber-700">Crusty sourdough topped with smashed avocado, poached eggs, and our special seasoning</p>
+                    <p class="text-xs text-amber-500 mt-2">Vegetarian • Gluten-free option</p>
+                </div>
+            </div>
+
+            <!-- Margherita Pizza -->
+            <div id="margherita" class="dish-card bg-white rounded-xl overflow-hidden">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('img/margherita-pizza.jpg')"></div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl font-bold text-amber-900">Margherita Pizza</h2>
+                        <span class="text-lg font-bold text-amber-600">$12.00</span>
+                    </div>
+                    <div class="my-3 flex flex-wrap">
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">San Marzano Tomatoes</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Fresh Mozzarella</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Basil</span>
+                    </div>
+                    <p class="text-sm text-amber-700">Classic Neapolitan-style pizza with hand-stretched dough cooked in our wood-fired oven</p>
+                </div>
+            </div>
+
+            <!-- Sunrise Burger -->
+            <div class="dish-card bg-white rounded-xl overflow-hidden">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('img/sunrise-burger.jpg')"></div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <h2 class="text-xl font-bold text-amber-900">Sunrise Burger</h2>
+                        <span class="text-lg font-bold text-amber-600">$11.50</span>
+                    </div>
+                    <div class="my-3 flex flex-wrap">
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Angus Beef</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Brioche Bun</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Sunny-Side Egg</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs mr-2 mb-2">Special Sauce</span>
+                    </div>
+                    <p class="text-sm text-amber-700">Juicy beef patty with melted cheese, crispy bacon, and a sunny-side up egg</p>
+                    <p class="text-xs text-amber-500 mt-2">Comes with fries or salad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Pause animation on hover
+        const scrollContainer = document.querySelector('.scrolling-wrapper');
+        scrollContainer.addEventListener('mouseenter', () => {
+            scrollContainer.style.animationPlayState = 'paused';
+        });
+        scrollContainer.addEventListener('mouseleave', () => {
+            scrollContainer.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>
