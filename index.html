@@ -48,6 +48,16 @@
         <p class="text-amber-600 italic">Morning bliss in every bite</p>
     </header>
 
+    <div id="nav-placeholder"></div>
+
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
+
     <!-- Category Cards -->
     <div class="grid gap-6">
         <!-- Drinks Card -->
