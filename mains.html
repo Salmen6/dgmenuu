@@ -63,6 +63,15 @@
             <h1 class="text-3xl font-serif font-bold text-amber-800 mb-1">Main Dishes</h1>
             <p class="text-amber-600">Hearty meals made with love</p>
         </header>
+        <div id="nav-placeholder"></div>
+
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
 
         <!-- Menu Items -->
         <div class="grid gap-6">
@@ -122,16 +131,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Pause animation on hover
-        const scrollContainer = document.querySelector('.scrolling-wrapper');
-        scrollContainer.addEventListener('mouseenter', () => {
-            scrollContainer.style.animationPlayState = 'paused';
-        });
-        scrollContainer.addEventListener('mouseleave', () => {
-            scrollContainer.style.animationPlayState = 'running';
-        });
-    </script>
 </body>
 </html>
